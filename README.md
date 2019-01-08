@@ -1,2 +1,2 @@
-# Lokaverkefni2.0
-Lokaverkefni
+# Lokaverkefni
+Lokaverkfni fyrir BSc gráðu í Tölvunarfræði við Háskóla Íslands
