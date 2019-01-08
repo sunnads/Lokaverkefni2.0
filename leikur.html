@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Reiknum saman</title>
+        <link href="leikur-style.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet' type='text/css'>
+    </head>
+    <body style="background-color: #A10000;">
+        <div id="Page1" class="cleared" style="" >
+            <h1>Velkomin á Reiknum saman</h1>
+            <h2>Hvernig dæmi viltu reikna</h2>
+            <form id="checkedBoxes">
+                <input type="checkbox" name="checkbox" value="+"><span><b>  +</b>(Plús)</span>
+                <input type="checkbox" name="checkbox" value="-"><span><b>  &#8722;</b>(Mínus)</span>
+                <input type="checkbox" name="checkbox" value="*"><span><b>  &#215;</b>(Margföldun)</span>
+                <input type="checkbox" name="checkbox" value="/"><span><b>  &#247;</b>(Deiling)</span>
+            </form>
+            <br>
+            <br>
+            <br>
+            <div id="veljaTakki" class="velja">
+                <a href="#" style="text-decoration: none;" class="velja">Byrja að reikna</a>
+            </div>
+            <div id="overlay">
+                <div>
+                    <p>Veldu hvernig dæmi þú vilt reikna með því að velja eina eða fleiri stærðfræðiaðferð</p>
+                    <a href="#" style="text-decoration: none;" onclick="overlay()"><b>OK</b></a>
+                </div>
+            </div>
+            <script type="text/javascript">
+                function overlay() {
+                    el = document.getElementById("overlay");
+                    el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+                }
+            </script>
+        </div>
+        <div id="Page2" class="cleared" style="display:none" >
+            <h3>Reiknum saman</h3>
+            <div id="spila-container">
+                <div id="stig">Fjöldi réttra svara: <span id="stigGildi">0</span></div>
+                <div id="rett">Rétt svar</div>
+                <div id="rangt">Vitlaust svar, reyndu aftur</div>
+                <div id="spurningar">
+                </div>
+                <div id="svar">
+                    <div id="box1" class="box"></div>
+                    <div id="box2" class="box"></div>
+                    <div id="box3" class="box"></div>
+                    <div id="box4" class="box"></div>
+                </div>
+                <div id="spilaTakki">Spila aftur</div>
+                <div id="timi">Tími eftir: <span id="timiGildi">60</span>sec</div>
+                <div id="leikLokid">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="leikur.js"></script>
+    </body>
+</html>
